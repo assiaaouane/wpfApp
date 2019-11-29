@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:views = "clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="WpfApp1" Height="350" Width="900">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="191">
+            <views:ArretView x:Name = "ArretViewControl" Loaded = "ArretViewControl_Loaded" Margin="0,0,-212,0"/>
+            <TextBox x:Name="latitude" Text = "{Binding Path = Lat, Mode = TwoWay}" Margin = "535,0,-466,274"/>
+            <TextBox x:Name="longitude" Text = "{Binding Path = Lon, Mode = TwoWay}" Margin = "408,0,-344,274"/>
+            <Button Content="OK" Width="50" Height="20" Grid.Column="0" Background="Blue" Foreground="DarkOrange" Command="{Binding Button, Mode = TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.181,1.265" Margin="607,75,-466,0"/>
+        </Grid>
+
+
+    </Grid>
+</Window>
+    
+
+    
